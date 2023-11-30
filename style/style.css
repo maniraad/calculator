@@ -1,0 +1,61 @@
+@import url(reset.css);
+
+:root {
+    --main-color: #17171C;
+    --btn-color: #2E2F38;
+    --secondary-btn-color: #4E505F;
+    --text-color: #ffffff;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-color);
+}
+
+.container {
+    min-width: 300px;
+    width: 100%;
+    padding:20px;
+}
+
+input {
+    height: 80px;
+    width: 100%;
+    outline: none;
+    border: none;
+    text-align: right;
+    margin-bottom: 10px;
+    font-family: Work Sans;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 96px;
+    color: var(--text-color);
+    background: var(--main-color);
+}
+
+.buttons {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button { cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 12px;
+    align-items: center;
+    border-radius: 24px;
+    background: #4E505F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: Work Sans;
+    font-size: 32px;
+    line-height: 40px;
+    color: var(--text-color);
+}
