@@ -2,14 +2,17 @@ const $ = document;
 
 const input = $.querySelector('input');
 const buttonsElem = $.querySelectorAll('button');
+const toggleButton = $.querySelector(".toggle-btn");
+const container = $.querySelector(".container");
 
 let output = "";
 let buttons = Array.from(buttonsElem);
+let isOn = null;
 
 buttons.forEach(button => {
 
     button.addEventListener('click', (event) => {
-        if (event.target.dataset.value == '=') {
+        if (event.target.dataset.value == '=' && output !== '') {
             output = eval(output);
             input.value = output;
         }
@@ -20,12 +23,21 @@ buttons.forEach(button => {
         }
         else if (event.target.dataset.value == 'Del') {
             output = output.substring(0, output.length - 1);
+            // output = output.toString().slice(0,-1)
             input.value = output;
-        }
-        else {
+        } else {
             output += event.target.dataset.value;
             input.value = output;
         }
 
     })
 })
+
+window.addEventListener('load', () => {
+    input.focus()
+})
+
+toggleButton.addEventListener("click", () => {
+    toggleButton.classList.toggle("active");
+    document.documentElement.classList.toggle("light-theme")
+});
