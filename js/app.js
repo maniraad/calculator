@@ -26,6 +26,6 @@ buttons.forEach(button => {
             output += event.target.dataset.value;
             input.value = output;
         }
-        
+
     })
 })
