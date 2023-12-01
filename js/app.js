@@ -11,7 +11,6 @@ buttons.forEach(button => {
     button.addEventListener('click', (event) => {
         if (event.target.dataset.value == '=') {
             output = eval(output);
-            console.log(eval(output));
             input.value = output;
         }
 
@@ -24,7 +23,7 @@ buttons.forEach(button => {
             input.value = output;
         }
         else {
-            output += event.target.innerHTML;
+            output += event.target.dataset.value;
             input.value = output;
         }
         

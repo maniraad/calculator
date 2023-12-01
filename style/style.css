@@ -16,9 +16,10 @@ body {
 }
 
 .container {
+    max-width: 530px;
     min-width: 300px;
     width: 100%;
-    padding:20px;
+    padding: 20px;
 }
 
 input {
@@ -27,7 +28,7 @@ input {
     outline: none;
     border: none;
     text-align: right;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
     font-family: Work Sans;
     font-size: 96px;
     font-style: normal;
@@ -39,11 +40,13 @@ input {
 
 .buttons {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 15px;
     grid-template-columns: repeat(4, 1fr);
 }
 
-button { cursor: pointer;
+button {
+    height: 75px;
+    cursor: pointer;
     border: none;
     outline: none;
     padding: 12px;
@@ -58,4 +61,12 @@ button { cursor: pointer;
     font-size: 32px;
     line-height: 40px;
     color: var(--text-color);
+}
+
+.operator--gray {
+    background-color: var(--secondary-btn-color);
+}
+
+.operator--blue {
+    background-color: #4B5EFC;
 }
