@@ -1,5 +1,11 @@
 @import url(reset.css);
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 :root {
     --main-color: #17171C;
     --btn-color: #2E2F38;
@@ -20,6 +26,7 @@ body {
     min-width: 300px;
     width: 100%;
     padding: 20px;
+    height: 45%;
 }
 
 input {
@@ -52,7 +59,7 @@ button {
     padding: 12px;
     align-items: center;
     border-radius: 24px;
-    background: #4E505F;
+    background: var(--btn-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,10 +70,24 @@ button {
     color: var(--text-color);
 }
 
+button:active {
+    transform: scale(0.99);
+    -webkit-transform: scale(0.99);
+    -moz-transform: scale(0.99);
+    -ms-transform: scale(0.99);
+    -o-transform: scale(0.99);
+}
+
 .operator--gray {
     background-color: var(--secondary-btn-color);
 }
 
 .operator--blue {
     background-color: #4B5EFC;
+}
+
+@media screen and (min-width:480px) {
+    .container {
+        height: 40%;
+    }
 }
