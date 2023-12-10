@@ -7,7 +7,7 @@ const container = $.querySelector(".container");
 
 let output = "";
 let buttons = Array.from(buttonsElem);
-let isOn = null;
+let newQuery = window.matchMedia(' (max-width:480px) ');
 
 buttons.forEach(button => {
 
@@ -41,3 +41,5 @@ toggleButton.addEventListener("click", () => {
     toggleButton.classList.toggle("active");
     document.documentElement.classList.toggle("light-theme")
 });
+
+input.disabled = newQuery.matches ? true : false;
